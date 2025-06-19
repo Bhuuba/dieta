@@ -31,9 +31,14 @@ const DayMenu = () => {
     switch (normalizedPerson) {
       case "антоніо":
       case "antonio":
+      case "antonio junior":
+      case "антоніо junior":
         return antonio;
       case "марія":
       case "maria":
+      case "debora":
+      case "maria debora":
+      case "марія debora":
         return maria;
       case "естіва":
       case "estiva":
@@ -54,6 +59,7 @@ const DayMenu = () => {
     return (
       <div className="day-menu">
         <h2>Помилка: користувача не знайдено</h2>
+        <p>Спробуйте: Антоніо Junior, Maria Debora, або Естіва</p>
       </div>
     );
   }

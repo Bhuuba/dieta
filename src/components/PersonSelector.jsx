@@ -6,7 +6,11 @@ import { estiva } from "../data/estiva";
 
 const PersonSelector = () => {
   const navigate = useNavigate();
-  const people = [antonio, maria, estiva];
+  const people = [
+    { ...antonio, displayName: "Antonio Junior" },
+    { ...maria, displayName: "Maria Debora" },
+    { ...estiva, displayName: "Естіва" },
+  ];
 
   const handlePersonClick = (person) => {
     const normalizedName = person.name.toLowerCase();
@@ -23,7 +27,7 @@ const PersonSelector = () => {
             className="person-card"
             onClick={() => handlePersonClick(person)}
           >
-            <h2>{person.name}</h2>
+            <h2>{person.displayName}</h2>
           </button>
         ))}
       </div>
