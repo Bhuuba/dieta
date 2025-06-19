@@ -1,5 +1,5 @@
 export const antonio = {
-  name: "Антоніо",
+  name: "Antonio junior",
   week: {
     Понеділок: {
       сніданок: "200мл яєчних білків + сік із ягід, фенхеля та селери",
