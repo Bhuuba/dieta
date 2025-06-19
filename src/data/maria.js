@@ -1,5 +1,5 @@
 export const maria = {
-  name: "Maria",
+  name: "Maria Debora",
   week: {
     Понеділок: {
       сніданок: "Кава, чай, білий хліб з мармеладом, груші, волоські горіхи",

@@ -6,15 +6,16 @@ import { estiva } from "../data/estiva";
 
 const PersonSelector = () => {
   const navigate = useNavigate();
+
+  // Порядок відображення: 1. Antonio Giacomo, 2. Maria Debora, 3. Antonio Lorenzo
   const people = [
-    { ...antonio, displayName: "Antonio Junior" },
-    { ...maria, displayName: "Maria Debora" },
-    { ...estiva, displayName: "Естіва" },
+    { ...antonio, displayName: "Antonio Giacomo", urlName: "antonio-giacomo" },
+    { ...maria, displayName: "Maria Debora", urlName: "maria-debora" },
+    { ...estiva, displayName: "Antonio Lorenzo", urlName: "antonio-lorenzo" },
   ];
 
   const handlePersonClick = (person) => {
-    const normalizedName = person.name.toLowerCase();
-    navigate(`/menu/${normalizedName}`);
+    navigate(`/menu/${person.urlName}`);
   };
 
   return (
@@ -23,7 +24,7 @@ const PersonSelector = () => {
       <div className="people-grid">
         {people.map((person) => (
           <button
-            key={person.name}
+            key={person.displayName}
             className="person-card"
             onClick={() => handlePersonClick(person)}
           >

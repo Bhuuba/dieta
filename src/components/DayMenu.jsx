@@ -29,20 +29,16 @@ const DayMenu = () => {
   const getPerson = () => {
     const normalizedPerson = person.toLowerCase();
     switch (normalizedPerson) {
-      case "antonio-senior":
+      case "antonio-giacomo":
+      case "giacomo":
       case "antonio":
-      case "антоніо":
         return antonio;
       case "maria-debora":
       case "maria":
       case "debora":
-      case "марія":
         return maria;
-      case "antonio-junior":
-      case "junior":
-      case "антоніо-junior":
-      case "estiva":
-      case "естіва":
+      case "antonio-lorenzo":
+      case "lorenzo":
         return estiva;
       default:
         return null;
@@ -61,10 +57,10 @@ const DayMenu = () => {
       <div className="day-menu">
         <h2>Помилка: користувача не знайдено</h2>
         <p>Спробуйте один з цих варіантів:</p>
-        <ul>
-          <li>antonio-senior або antonio (Антоніо старший)</li>
-          <li>maria-debora або debora (Марія Дебора)</li>
-          <li>antonio-junior або estiva (Антоніо молодший)</li>
+        <ul className="error-list">
+          <li>1. Antonio Giacomo (antonio-giacomo)</li>
+          <li>2. Maria Debora (maria-debora)</li>
+          <li>3. Antonio Lorenzo (antonio-lorenzo)</li>
         </ul>
       </div>
     );
